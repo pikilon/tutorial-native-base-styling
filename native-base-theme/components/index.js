@@ -42,10 +42,12 @@ import formTheme from "./Form";
 import separatorTheme from "./Separator";
 import pickerTheme from "./Picker"
 import variable from "./../variables/platform";
+import myComponentTheme from './custom/MyComponent.Piki';
 
 export default (variables = variable) => {
   const theme = {
     variables,
+    'Piki.MyComponent': {...myComponentTheme(variables)},
     "NativeBase.Left": {
       ...leftTheme(variables)
     },
