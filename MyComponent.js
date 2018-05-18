@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { connectStyle } from 'native-base';
+import { StyleSheet, Text } from 'react-native';
+import { connectStyle, View } from 'native-base';
+import { STYLE_NAME } from './MyComponent.style'
 
 class MyComponentWithoutStyles extends React.Component { // doesn't work with functional
   render() {
@@ -15,7 +16,4 @@ class MyComponentWithoutStyles extends React.Component { // doesn't work with fu
   }
 }
 
-export const MyComponent = connectStyle('Piki.MyComponent', {})(MyComponentWithoutStyles);
-
-
-
+export const MyComponent = connectStyle(STYLE_NAME, {})(MyComponentWithoutStyles);
