@@ -4,14 +4,15 @@ export const STYLE_NAME = 'Piki.MyComponent';
 
 export const generateStyle = (variables = variable) => ({
   'NativeBase.ViewNB': {
+    'NativeBase.Text':{
+      color: variables.brandPrimary      
+    },
+  },
+  nativeComponent: {
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-
-    'NativeBase.Text':{
-      color: variables.brandPrimary      
-    },
   },
 });
 
