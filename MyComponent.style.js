@@ -9,6 +9,10 @@ export const generateStyle = (variables = variable) => ({
     alignItems: 'center',
     justifyContent: 'center',
 
+    '.myComponent': {
+      backgroundColor: 'orange',
+    },
+
     'NativeBase.Text':{
       color: variables.brandPrimary      
     },
