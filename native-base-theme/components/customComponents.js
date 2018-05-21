@@ -1,6 +1,6 @@
 import variable from "../variables/platform";
-import { styleRule as myComponent } from '../../MyComponent.style.js';
+import { styleRule as myApp } from '../../MyApp.style.js';
 
 export const customComponents = (variables = variable) => ({
-	...myComponent(variables)
+	...myApp(variables)
 });
