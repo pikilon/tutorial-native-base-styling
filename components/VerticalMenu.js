@@ -1,6 +1,7 @@
 import React from 'react';
 import { connectStyle, View, Text } from 'native-base';
 import { MyButton } from './MyButton';
+import FadeInView from './VerticalMenu.animation';
 import { STYLE_NAME, generateStyle } from './VerticalMenu.style';
 
 class VerticalMenuWithoutStyles extends React.Component {
@@ -8,17 +9,19 @@ class VerticalMenuWithoutStyles extends React.Component {
     const { buttonsArray } = this.props;
     const lastIndex = buttonsArray.length - 1;
     return (
+        <FadeInView style={{backgroundColor: 'powderblue'}}>
         <View>
           {buttonsArray.map((number, index) =>
             <MyButton
-              shadow
-              number={number}
-              key={`horizontalButton ${number}`}
-              first={index === 0}
-              last={index >= lastIndex}
+            shadow
+            number={number}
+            key={`horizontalButton ${number}`}
+            first={index === 0}
+            last={index >= lastIndex}
             />
           )}
         </View>
+          </FadeInView>
     );
   }
 }
