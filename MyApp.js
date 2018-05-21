@@ -7,12 +7,11 @@ import {
   Container,
   Header,
   Left,
-  View,
   Text,
-  Title
 } from 'native-base';
 import { STYLE_NAME } from './MyApp.style'
 import { HorizontalMenu } from './components/HorizontalMenu';
+import { VerticalMenu } from './components/VerticalMenu';
 
 const buttonsArray = ['one', 'two', 'three', 'four'];
 class MyAppWithoutStyles extends React.Component {
@@ -23,7 +22,9 @@ class MyAppWithoutStyles extends React.Component {
               <HorizontalMenu buttonsArray={buttonsArray} />
             </Header>
             <Body>
-              <Left><Text>left</Text></Left>
+              <Left>
+                <VerticalMenu buttonsArray={buttonsArray} />
+              </Left>
               <Content>
                 <Text>content</Text>
               </Content>
