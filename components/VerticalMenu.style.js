@@ -16,6 +16,14 @@ export const generateStyle = (variables = variable) => {
       },
     },
   },
+  animationProps: {
+    style: {
+      backgroundColor: 'powderblue',
+    },
+    duration: 2000,
+    start: 0,
+    finish: 1,
+  }
 });}
 
 export const styleRule = (variables = variable) => ({

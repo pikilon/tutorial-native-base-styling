@@ -9,19 +9,19 @@ class VerticalMenuWithoutStyles extends React.Component {
     const { buttonsArray } = this.props;
     const lastIndex = buttonsArray.length - 1;
     return (
-        <FadeInView style={{backgroundColor: 'powderblue'}}>
-        <View>
-          {buttonsArray.map((number, index) =>
-            <MyButton
-            shadow
-            number={number}
-            key={`horizontalButton ${number}`}
-            first={index === 0}
-            last={index >= lastIndex}
-            />
-          )}
-        </View>
-          </FadeInView>
+        <FadeInView {...this.props.style.animationProps}>
+          <View>
+            {buttonsArray.map((number, index) =>
+              <MyButton
+                shadow
+                number={number}
+                key={`horizontalButton ${number}`}
+                first={index === 0}
+                last={index >= lastIndex}
+              />
+            )}
+          </View>
+        </FadeInView>
     );
   }
 }
