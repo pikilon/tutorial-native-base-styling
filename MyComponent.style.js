@@ -8,13 +8,17 @@ export const generateStyle = (variables = variable) => ({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-
-    '.myComponent': {
-      backgroundColor: 'orange',
-    },
+    padding: variables.contentPadding,
 
     'NativeBase.Text':{
-      color: variables.brandPrimary      
+      fontSize: 15,
+      color: variables.brandPrimary,
+      '.first': {
+        paddingLeft: 30,
+      },
+      '.last': {
+        color: 'red'
+      },
     },
   },
 });
