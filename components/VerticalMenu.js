@@ -11,6 +11,7 @@ class VerticalMenuWithoutStyles extends React.Component {
         <View>
           {buttonsArray.map((number, index) =>
             <MyButton
+              shadow
               number={number}
               key={`horizontalButton ${number}`}
               first={index === 0}
