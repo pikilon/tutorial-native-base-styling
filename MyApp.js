@@ -12,12 +12,16 @@ import {
   Title
 } from 'native-base';
 import { STYLE_NAME } from './MyApp.style'
+import { HorizontalMenu } from './components/HorizontalMenu';
 
+const buttonsArray = ['one', 'two', 'three', 'four'];
 class MyAppWithoutStyles extends React.Component {
   render() {
     return (
         <Container>
-            <Header><Title>Header</Title></Header>
+            <Header>
+              <HorizontalMenu buttonsArray={buttonsArray} />
+            </Header>
             <Body>
               <Left><Text>left</Text></Left>
               <Content>
